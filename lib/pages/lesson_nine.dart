@@ -13,7 +13,8 @@ class _LessonNineState extends State<LessonNine> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         centerTitle: true,
         title: Text("AppBar"),
         leading: IconButton(
@@ -27,8 +28,8 @@ class _LessonNineState extends State<LessonNine> {
           )
         ],
       ),
-      body: Center(
-        child: Text('Scaffold', style: TextStyle(fontSize: 45),),
+      body: Container(
+
       ),
     );
   }
