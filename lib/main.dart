@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pdp_lesson/pages/lesson_eight.dart';
 import 'package:pdp_lesson/pages/lesson_nine.dart';
 import 'package:pdp_lesson/pages/lesson_ten.dart';
+import 'package:pdp_lesson/pages/page_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,11 +25,12 @@ class MyApp extends StatelessWidget {
           titleTextStyle: TextStyle(color: Colors.black, fontSize: 24, fontWeight: FontWeight.w500)
         )
       ),
-      home: LessonTen(),
+      home: ListPage(),
       routes: {
         LessonEight.id: (context) => LessonEight(),
         LessonNine.id: (context) => LessonNine(),
         LessonTen.id: (context) => LessonTen(),
+        ListPage.id: (context) => ListPage(),
       },
     );
   }
