@@ -63,7 +63,7 @@ class _LessonNineState extends State<LessonNine> {
         ),
       ),
       floatingActionButtonLocation: _location,
-      floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
+      // floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: Colors.white,
