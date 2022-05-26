@@ -35,7 +35,7 @@ class _ListPageState extends State<ListPage> {
       ),
       */
       body: ListView(
-        children: [
+        children: const [
           // Container(
           //   height: 400,
           //   color: Colors.primaries[Random().nextInt(10)],
@@ -49,7 +49,12 @@ class _ListPageState extends State<ListPage> {
           //   color: Colors.primaries[Random().nextInt(10)],
           // ),
 
-          ListTile()
+          ListTile(
+            leading: Icon(Icons.account_circle_outlined),
+            title: Text("Title"),
+            subtitle: Text("Content"),
+            trailing: Icon(Icons.more_vert),
+          )
         ],
       ),
     );
