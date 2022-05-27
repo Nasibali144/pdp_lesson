@@ -6,6 +6,7 @@ import 'package:pdp_lesson/pages/lesson_eleven_three.dart';
 import 'package:pdp_lesson/pages/lesson_eleven_two.dart';
 import 'package:pdp_lesson/pages/lesson_nine.dart';
 import 'package:pdp_lesson/pages/lesson_ten.dart';
+import 'package:pdp_lesson/pages/lesson_twelve/lesson_twelve_one.dart';
 import 'package:pdp_lesson/pages/page_list.dart';
 
 void main() {
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
           titleTextStyle: TextStyle(color: Colors.black, fontSize: 24, fontWeight: FontWeight.w500)
         )
       ),
-      home: LessonElevenThree(),
+      home: LessonTwelveOne(),
       routes: {
         LessonEight.id: (context) => LessonEight(),
         LessonNine.id: (context) => LessonNine(),
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
         LessonElevenOne.id: (context) => LessonElevenOne(),
         LessonElevenTwo.id: (context) => LessonElevenTwo(),
         LessonElevenThree.id: (context) => LessonElevenThree(),
+        LessonTwelveOne.id: (context) => LessonTwelveOne(),
       },
     );
   }
