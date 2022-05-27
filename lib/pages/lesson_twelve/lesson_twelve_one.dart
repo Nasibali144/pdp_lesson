@@ -15,13 +15,16 @@ class _LessonTwelveOneState extends State<LessonTwelveOne> {
 
    Future customBottomSheet(BuildContext context) {
     return showModalBottomSheet(
-      // anchorPoint: Offset(0.5, 0.5),
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
       context: context,
-      constraints: BoxConstraints.expand(),
+      constraints: BoxConstraints(
+        maxHeight: MediaQuery.of(context).size.height * .5,
+        // minHeight: MediaQuery.of(context).size.height * .7,
+      ),
       builder: (context) {
         return Container(
           clipBehavior: Clip.antiAlias,
-          height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           decoration: const BoxDecoration(
               color: Colors.white,
