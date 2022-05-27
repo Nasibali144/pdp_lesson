@@ -7,6 +7,8 @@ import 'package:pdp_lesson/pages/lesson_eleven_two.dart';
 import 'package:pdp_lesson/pages/lesson_nine.dart';
 import 'package:pdp_lesson/pages/lesson_ten.dart';
 import 'package:pdp_lesson/pages/lesson_twelve/lesson_twelve_one.dart';
+import 'package:pdp_lesson/pages/lesson_twelve/lesson_twelve_three.dart';
+import 'package:pdp_lesson/pages/lesson_twelve/lesson_twelve_two.dart';
 import 'package:pdp_lesson/pages/page_list.dart';
 
 void main() {
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
           titleTextStyle: TextStyle(color: Colors.black, fontSize: 24, fontWeight: FontWeight.w500)
         )
       ),
-      home: LessonTwelveOne(),
+      home: LessonTwelveThree(),
       routes: {
         LessonEight.id: (context) => LessonEight(),
         LessonNine.id: (context) => LessonNine(),
@@ -41,6 +43,8 @@ class MyApp extends StatelessWidget {
         LessonElevenTwo.id: (context) => LessonElevenTwo(),
         LessonElevenThree.id: (context) => LessonElevenThree(),
         LessonTwelveOne.id: (context) => LessonTwelveOne(),
+        LessonTwelveTwo.id: (context) => LessonTwelveTwo(),
+        LessonTwelveThree.id: (context) => LessonTwelveThree(),
       },
     );
   }

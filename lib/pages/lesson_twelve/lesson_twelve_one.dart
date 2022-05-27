@@ -11,7 +11,7 @@ class LessonTwelveOne extends StatefulWidget {
   State<LessonTwelveOne> createState() => _LessonTwelveOneState();
 }
 
-class _LessonTwelveOneState extends State<LessonTwelveOne> {
+class _LessonTwelveOneState extends State<LessonTwelveOne>{
 
    Future customBottomSheet(BuildContext context) {
     return showModalBottomSheet(
@@ -39,32 +39,92 @@ class _LessonTwelveOneState extends State<LessonTwelveOne> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      backgroundColor: Colors.grey,
-      body: SizedBox(
-        width: MediaQuery.of(context).size.width,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            ElevatedButton(
-              child: const Text("BottomSheet"),
-              onPressed: () {
-                // Utils.customDialog(
-                //   context: context,
-                //   title: "Are you going to be Flutter Developer?",
-                //   content: "Still early?",
-                //   onPressed: () {
-                //     print("Hali Bor");
-                //     Navigator.pop(context);
-                //   },
-                // );
-
-                customBottomSheet(context);
-              },
-            ),
-          ],
+      backgroundColor: Colors.white,
+      body: GridView(
+        padding: EdgeInsets.all(10),
+        primary: false,
+        shrinkWrap: true,
+        // reverse: true,
+        semanticChildCount: 4,
+        physics: const BouncingScrollPhysics(),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+          childAspectRatio: 2 / 3,
+          mainAxisSpacing: 10,
+          crossAxisSpacing: 10,
         ),
+        children: [
+          GridTile(
+            header: Container(
+              height: 20,
+              color: Colors.blue,
+              child: Text("Flutter"),
+            ),
+            child: Container(
+              color: Colors.red,
+            ),
+            footer: Container(
+              height: 20,
+              color: Colors.yellow,
+            ),
+          ),
+          GridTile(
+            header: Container(
+              height: 20,
+              color: Colors.blue,
+              child: Text("Flutter"),
+            ),
+            child: Container(
+              color: Colors.red,
+            ),
+            footer: Container(
+              height: 20,
+              color: Colors.yellow,
+            ),
+          ),
+          GridTile(
+            header: Container(
+              height: 20,
+              color: Colors.blue,
+              child: Text("Flutter"),
+            ),
+            child: Container(
+              color: Colors.red,
+            ),
+            footer: Container(
+              height: 20,
+              color: Colors.yellow,
+            ),
+          ),
+          GridTile(
+            header: Container(
+              height: 20,
+              color: Colors.blue,
+              child: Text("Flutter"),
+            ),
+            child: Container(
+              color: Colors.red,
+            ),
+            footer: Container(
+              height: 20,
+              color: Colors.yellow,
+            ),
+          ),
+          GridTile(
+            header: Container(
+              height: 20,
+              color: Colors.blue,
+              child: Text("Flutter"),
+            ),
+            child: Container(
+              color: Colors.red,
+            ),
+            footer: Container(
+              height: 20,
+              color: Colors.yellow,
+            ),
+          ),
+        ],
       ),
     );
   }
