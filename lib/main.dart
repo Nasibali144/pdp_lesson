@@ -6,6 +6,8 @@ import 'package:pdp_lesson/pages/lesson_eleven_three.dart';
 import 'package:pdp_lesson/pages/lesson_eleven_two.dart';
 import 'package:pdp_lesson/pages/lesson_nine.dart';
 import 'package:pdp_lesson/pages/lesson_ten.dart';
+import 'package:pdp_lesson/pages/lesson_thirteen/lesson_thirteen.dart';
+import 'package:pdp_lesson/pages/lesson_thirteen/lesson_thirteen_one.dart';
 import 'package:pdp_lesson/pages/lesson_twelve/lesson_twelve_one.dart';
 import 'package:pdp_lesson/pages/lesson_twelve/lesson_twelve_three.dart';
 import 'package:pdp_lesson/pages/lesson_twelve/lesson_twelve_two.dart';
@@ -25,6 +27,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        // tabBarTheme: TabBarTheme(
+        //   indicatorSize: TabBarIndicatorSize.tab,
+        //   indicator: BoxDecoration(
+        //     color: Colors.purple
+        //   ),
+        // ),
         appBarTheme: const AppBarTheme(
           iconTheme: IconThemeData(
             color: Colors.black
@@ -32,7 +40,7 @@ class MyApp extends StatelessWidget {
           titleTextStyle: TextStyle(color: Colors.black, fontSize: 24, fontWeight: FontWeight.w500)
         )
       ),
-      home: LessonTwelveThree(),
+      home: LessonThirteenOne(),
       routes: {
         LessonEight.id: (context) => LessonEight(),
         LessonNine.id: (context) => LessonNine(),
@@ -45,6 +53,8 @@ class MyApp extends StatelessWidget {
         LessonTwelveOne.id: (context) => LessonTwelveOne(),
         LessonTwelveTwo.id: (context) => LessonTwelveTwo(),
         LessonTwelveThree.id: (context) => LessonTwelveThree(),
+        LessonThirteen.id: (context) => LessonThirteen(),
+        LessonThirteenOne.id: (context) => LessonThirteenOne(),
       },
     );
   }
