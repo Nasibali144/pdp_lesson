@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class LessonThirteenOne extends StatefulWidget {
   static const id = "lesson_thirteen_one";
@@ -14,15 +16,15 @@ class _LessonThirteenOneState extends State<LessonThirteenOne> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Text Field",
           style: TextStyle(color: Colors.white),
         ),
       ),
-      body: const Padding(
+      body:  Padding(
         padding: EdgeInsets.symmetric(vertical: 50, horizontal: 20),
         child: TextField(
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             enabled: true,
             // icon: Icon(Icons.color_lens),
             // prefixIcon: Icon(Icons.color_lens),
@@ -66,8 +68,53 @@ class _LessonThirteenOneState extends State<LessonThirteenOne> {
             // focusColor: Colors.purple,
             // hoverColor: Colors.red
 
-            // border: UnderlineInputBorder(),
+            border: OutlineInputBorder(),
+
+            hintText: "Flutter B17",
           ),
+          keyboardType: TextInputType.text,
+          textInputAction: TextInputAction.done,
+          textCapitalization: TextCapitalization.sentences,
+          style: TextStyle(fontSize: 24),
+          // strutStyle: StrutStyle(
+          //   leading: 0.1
+          // ),
+          textAlign: TextAlign.end,
+          textAlignVertical: TextAlignVertical.bottom,
+          // maxLines: 5,
+          textDirection: TextDirection.ltr,
+          // showCursor: false,
+          readOnly: false,
+          toolbarOptions: ToolbarOptions(
+            copy: true,
+            cut: true,
+            selectAll: true,
+            paste: false
+          ),
+          autofocus: true,
+          // obscureText: true,
+          // obscuringCharacter: "\u2665",
+          smartDashesType: SmartDashesType.enabled,
+          smartQuotesType: SmartQuotesType.disabled,
+          // enableSuggestions: false,
+          autocorrect: true,
+          // minLines: 1,
+          // maxLines: 1,
+          // maxLength: 6,
+
+          maxLines: null,
+          // expands: true,
+
+          // cursorColor: Colors.purple,
+          // cursorHeight: 40,
+          // cursorWidth: 20,
+          // cursorRadius: Radius.circular(30),
+
+          // scribbleEnabled: ,
+          restorationId: "Hello",
+          autofillHints: ["Flutter", "B17", "Group"],
+          selectionControls: CupertinoTextSelectionControls(),
+          keyboardAppearance: Brightness.light,
         ),
       ),
     );
