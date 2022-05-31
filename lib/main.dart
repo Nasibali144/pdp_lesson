@@ -13,6 +13,7 @@ import 'package:pdp_lesson/pages/lesson_twelve/lesson_twelve_three.dart';
 import 'package:pdp_lesson/pages/lesson_twelve/lesson_twelve_two.dart';
 import 'package:pdp_lesson/pages/page_list.dart';
 import 'package:pdp_lesson/pages/text_field/text_field_one.dart';
+import 'package:pdp_lesson/pages/text_field/text_field_three.dart';
 import 'package:pdp_lesson/pages/text_field/text_field_two.dart';
 
 void main() {
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
           titleTextStyle: TextStyle(color: Colors.black, fontSize: 24, fontWeight: FontWeight.w500)
         )
       ),
-      home: TextFieldTwo(),
+      home: TextFieldThree(),
       routes: {
         LessonEight.id: (context) => LessonEight(),
         LessonNine.id: (context) => LessonNine(),
@@ -59,6 +60,7 @@ class MyApp extends StatelessWidget {
         LessonThirteenOne.id: (context) => LessonThirteenOne(),
         TextFieldOne.id: (context) => TextFieldOne(),
         TextFieldTwo.id: (context) => TextFieldTwo(),
+        TextFieldThree.id: (context) => TextFieldThree(),
       },
     );
   }
