@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class TextFieldThree extends StatefulWidget {
-  static const id = "text_field_three";
-  const TextFieldThree({Key? key}) : super(key: key);
+class TextFieldFour extends StatefulWidget {
+  static const id = "text_field_four";
+  const TextFieldFour({Key? key}) : super(key: key);
 
   @override
-  State<TextFieldThree> createState() => _TextFieldThreeState();
+  State<TextFieldFour> createState() => _TextFieldFourState();
 }
 
-class _TextFieldThreeState extends State<TextFieldThree> {
+class _TextFieldFourState extends State<TextFieldFour> {
   String data = "";
 
   @override
@@ -29,11 +29,16 @@ class _TextFieldThreeState extends State<TextFieldThree> {
               ),
               style: const TextStyle(fontSize: 35),
               textInputAction: TextInputAction.send,
-              onSubmitted: (text) {
-                setState((){
-                  data = text;
-                });
+              /// Hammada datalarni olib ish tugagandan so'ng bajarilishi kerak bo'lgan funksiya
+              onEditingComplete: (){
+                print("Compelled");
               },
+
+              /// ?
+              // onAppPrivateCommand: (text, map){
+              //   print("text: $text");
+              //   print("map: $map");
+              // },
             ),
           ),
         ],

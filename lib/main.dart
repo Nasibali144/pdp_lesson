@@ -12,6 +12,8 @@ import 'package:pdp_lesson/pages/lesson_twelve/lesson_twelve_one.dart';
 import 'package:pdp_lesson/pages/lesson_twelve/lesson_twelve_three.dart';
 import 'package:pdp_lesson/pages/lesson_twelve/lesson_twelve_two.dart';
 import 'package:pdp_lesson/pages/page_list.dart';
+import 'package:pdp_lesson/pages/text_field/text_field_five.dart';
+import 'package:pdp_lesson/pages/text_field/text_field_four.dart';
 import 'package:pdp_lesson/pages/text_field/text_field_one.dart';
 import 'package:pdp_lesson/pages/text_field/text_field_three.dart';
 import 'package:pdp_lesson/pages/text_field/text_field_two.dart';
@@ -43,7 +45,7 @@ class MyApp extends StatelessWidget {
           titleTextStyle: TextStyle(color: Colors.black, fontSize: 24, fontWeight: FontWeight.w500)
         )
       ),
-      home: TextFieldThree(),
+      home: TextFieldFive(),
       routes: {
         LessonEight.id: (context) => LessonEight(),
         LessonNine.id: (context) => LessonNine(),
@@ -61,6 +63,8 @@ class MyApp extends StatelessWidget {
         TextFieldOne.id: (context) => TextFieldOne(),
         TextFieldTwo.id: (context) => TextFieldTwo(),
         TextFieldThree.id: (context) => TextFieldThree(),
+        TextFieldFour.id: (context) => TextFieldFour(),
+        TextFieldFive.id: (context) => TextFieldFive(),
       },
     );
   }
