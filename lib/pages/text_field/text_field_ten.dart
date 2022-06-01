@@ -10,31 +10,47 @@ class TextFieldTen extends StatefulWidget {
 
 class _TextFieldTenState extends State<TextFieldTen> {
 
-  GlobalKey key = GlobalKey<FormState>();
+  final key = GlobalKey<FormState>();
+  String password = "";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Form(
-
         key: key,
-        child: Center(
-          child: TextFormField(
-            validator: (text) {
-              if(text != null && text.length >= 8 && RegExp(text).hasMatch(r'[A-Z0-9a-z]')) {
-                return null;
-              } else {
-                return "Please enter valid password!";
-              }
-            },
-            onFieldSubmitted: (text) {
-            },
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              prefixIcon: Icon(Icons.lock),
-              hintText: "Password"
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextFormField(
+              validator: (text) {
+                if(text != null && text.length >= 8) {
+                  return null;
+                } else {
+                  return "Please enter valid password!";
+                }
+              },
+              onSaved: (text) {
+                if(text != null) {
+                  password = text;
+                }
+              },
+              decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.lock),
+                  hintText: "Password"
+              ),
             ),
-          ),
+            const SizedBox(height: 20,),
+            ElevatedButton(
+              onPressed: () {
+                key.currentState!.validate();
+                print(password);
+                key.currentState!.save();
+                print(password);
+              },
+              child: Text("Check"),
+            )
+          ],
         ),
       ),
     );
