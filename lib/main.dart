@@ -22,6 +22,8 @@ import 'package:pdp_lesson/pages/text_field/text_field_six.dart';
 import 'package:pdp_lesson/pages/text_field/text_field_three.dart';
 import 'package:pdp_lesson/pages/text_field/text_field_two.dart';
 
+import 'pages/lesson_fourteen/glassmorphism.dart';
+import 'pages/lesson_fourteen/neumorphism.dart';
 import 'pages/text_field/text_field_eight.dart';
 import 'pages/text_field/text_field_seven.dart';
 import 'pages/text_field/text_field_ten.dart';
@@ -53,7 +55,7 @@ class MyApp extends StatelessWidget {
           titleTextStyle: TextStyle(color: Colors.black, fontSize: 24, fontWeight: FontWeight.w500)
         )
       ),
-      home: NavigationRailPage(),
+      home: Glassmorphism(),
       routes: {
         LessonEight.id: (context) => LessonEight(),
         LessonNine.id: (context) => LessonNine(),
