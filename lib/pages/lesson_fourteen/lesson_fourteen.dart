@@ -25,7 +25,7 @@ class _LessonFourTeenState extends State<LessonFourTeen> {
                 });
               },
               backgroundColor: Colors.white,
-              destinations: [
+              destinations: const [
                 NavigationRailDestination(
                   selectedIcon: Icon(Icons.favorite),
                   icon: Icon(Icons.favorite_outline),
