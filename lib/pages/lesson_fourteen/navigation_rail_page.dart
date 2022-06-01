@@ -53,13 +53,16 @@ class _NavigationRailPageState extends State<NavigationRailPage> {
                 label: Text("regular"),
               ),
             ],
+            // trailing: Column(
+            //   children: [
+            //     categoriesItem(index: 0, title: titles[0], onPressed: () {}),
+            //     categoriesItem(index: 1, title: titles[1], onPressed: () {}),
+            //     categoriesItem(index: 2, title: titles[2], onPressed: () {}),
+            //     categoriesItem(index: 3, title: titles[3], onPressed: () {}),
+            //   ],
+            // ),
             trailing: Column(
-              children: [
-                categoriesItem(index: 0, title: titles[0], onPressed: () {}),
-                categoriesItem(index: 1, title: titles[1], onPressed: () {}),
-                categoriesItem(index: 2, title: titles[2], onPressed: () {}),
-                categoriesItem(index: 3, title: titles[3], onPressed: () {}),
-              ],
+              children: List.generate(titles.length, (index) => categoriesItem(index: index, title: titles[index], onPressed: () {}),),
             ),
           ),
 
