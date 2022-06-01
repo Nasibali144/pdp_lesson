@@ -13,18 +13,6 @@ class _NavigationRailPageState extends State<NavigationRailPage> {
   int _selectedIndex = 0;
   int _selectedMenu = 0;
   List<String> titles = ["All", "Inspiration", "Favorites", "Popular"];
-  late List<Widget> list;
-
-  @override
-  initState() {
-    super.initState();
-    list = [
-      categoriesItem(index: 0, title: titles[0], onPressed: () {}),
-      categoriesItem(index: 1, title: titles[1], onPressed: () {}),
-      categoriesItem(index: 2, title: titles[2], onPressed: () {}),
-      categoriesItem(index: 3, title: titles[3], onPressed: () {}),
-    ];
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +54,12 @@ class _NavigationRailPageState extends State<NavigationRailPage> {
               ),
             ],
             trailing: Column(
-              children: list,
+              children: [
+                categoriesItem(index: 0, title: titles[0], onPressed: () {}),
+                categoriesItem(index: 1, title: titles[1], onPressed: () {}),
+                categoriesItem(index: 2, title: titles[2], onPressed: () {}),
+                categoriesItem(index: 3, title: titles[3], onPressed: () {}),
+              ],
             ),
           ),
 
